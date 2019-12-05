@@ -34,7 +34,7 @@ const currencies = [
 
 
 function Copyright() {
-  
+
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
@@ -110,7 +110,7 @@ export default function SignUp() {
                 autoComplete="lname"
               />
             </Grid>
-            
+
             <Grid item xs={12}>
               <TextField
                 variant="outlined"
@@ -192,6 +192,16 @@ export default function SignUp() {
               />
             </Grid>
             <Grid item xs={12}>
+<h4>Logo</h4>
+              <input
+                accept="image/*"
+                className={classes.input}
+                id="text-button-file"
+                multiple
+                type="file"
+              />
+            </Grid>
+            <Grid item xs={12}>
               <TextField
                 variant="outlined"
                 fullWidth
@@ -213,30 +223,30 @@ export default function SignUp() {
               />
             </Grid>
             <Grid item xs={12}>
-            <TextField
-          id="outlined-select-currency-native"
-          select
-          fullWidth
-          label="Activity Area"
-          className={classes.textField}
-          value={currency}
-          onChange={handleChange}
-          SelectProps={{
-            native: true,
-            MenuProps: {
-              className: classes.menu,
-            },
-          }}
-          helperText="Please select your area"
-          margin="normal"
-          variant="outlined"
-        >
-          {currencies.map(option => (
-            <option key={option.value} value={option.value}>
-              {option.label}
-            </option>
-          ))}
-        </TextField>
+              <TextField
+                id="outlined-select-currency-native"
+                select
+                fullWidth
+                label="Activity Area"
+                className={classes.textField}
+                value={currency}
+                onChange={handleChange}
+                SelectProps={{
+                  native: true,
+                  MenuProps: {
+                    className: classes.menu,
+                  },
+                }}
+                helperText="Please select your area"
+                margin="normal"
+                variant="outlined"
+              >
+                {currencies.map(option => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </TextField>
             </Grid>
             <Grid item xs={12}>
               <FormControlLabel
